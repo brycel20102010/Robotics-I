@@ -138,8 +138,9 @@ def control_loop(crx10, client):
     move_cartesian(crx10, [385.1, 285.0, -110.0+100, 179.9, 0, 90])
     pickup_block(crx10, [385.1, 285.0, -110.0, 179.9, 0, 90], 100, 1)
     crx10.write_joint_pose([0,0,0,0,-90,0])
-    move_slave(client, [270.5, 1006.0-150, 300.8, 90, -60, 179.9])    
+    move_slave(client, [540, -150, 305, 179.9, 0, 0])    
 
+time.sleep(5)
 crx10 = robot(robot_ip)
 crx10.set_speed(300) #Max 300
 crx10.write_joint_pose([0,0,0,0,-90,0])
